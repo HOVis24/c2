@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "target": "es6",
+    // ... your other options
+  },
   // https://v3.nuxtjs.org/concepts/typescript
   "extends": "./.nuxt/tsconfig.json"
 }

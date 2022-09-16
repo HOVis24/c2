@@ -1,5 +1,7 @@
 <template>
 
+
+
 <div class="main-container">
       <div class="image-container"></div>
       <div id="pumpkin">A pumpkin halloween decoration? In September? Weird!</div>
@@ -12,7 +14,12 @@
   </template>
   
   <script>
+import Panolens from 'panolens'; 
 
+let TWEEN    = Panolens.TWEEN;
+let PANOLENS = Panolens.PANOLENS;
+
+panorama = new PANOLENS.ImagePanorama('images/panoramic.png');
   </script>
 
   <style>

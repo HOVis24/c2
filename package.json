@@ -1,25 +1,34 @@
 {
+  "name": "panolense",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
+    "dev": "nuxt",
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "start": "nuxt start",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^10.0.0",
-    "@prettier/plugin-pug": "^2.2.0",
-    "eslint": "8.21.0",
-    "nuxt": "3.0.0-rc.8",
-    "prettier": "^2.7.1",
-    "pug": "^3.0.2",
-    "sass": "^1.54.4",
-    "vue": "^3.2.37"
+    "lint:js": "eslint --ext \\\".js,.vue\\\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check panolense",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different panolense && yarn lint:js --fix"
   },
   "dependencies": {
-    "panolens": "^0.12.1",
-    "three": "^0.144.0",
-    "typescript": "^4.7.4"
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "three": "0.105.0",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
+    "@nuxtjs/eslint-config": "^8.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^3.1.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "prettier": "^2.5.1"
   }
 }
